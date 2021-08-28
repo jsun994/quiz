@@ -89,10 +89,18 @@ body {
     margin-bottom: 30px;
 }
 
-.quiz-box .correct {
+.correct {
     border-top: 1px solid;
+    position: absolute;
+    top: 49%;
+    left: 29%;
+    transform: translate(-50%, -50%);
 }
 
-.quiz-box .incorrect {
+.incorrect {
     border-top: 1px solid;
+    position: absolute;
+    top: 49%;
+    left: 29%;
+    transform: translate(-50%, -50%);
 }

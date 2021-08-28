@@ -52,6 +52,7 @@ function guess(buttonId, choice) {
 
 function showScores() {
     window.alert("ended");
+    document.getElementById("qBox").style.display = "none";
 }
 
 var quiz = new Quiz(questions);
