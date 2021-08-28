@@ -31,7 +31,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    /*display: none;*/
 }
 
 .info .info-title {
@@ -54,30 +53,38 @@ body {
     background: rgb(175, 115, 200);
 }
 
-.quiz-box .questions {
+.quiz-box {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
 }
 
-.quiz-box .questions .que {
-    margin-bottom: 10px;
+.quiz-box h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
 }
 
-.quiz-box .questions .options-list .option .choice {
+.quiz-box .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-box .buttons .btn {
     text-align: left;
-    width: 150px;
+    width: 200px;
     color: white;
     background: rebeccapurple;
     border-radius: 5px;
     margin-bottom: 5px;
 }
 
-.quiz-box .questions .options-list .option:last-child {
-    margin-bottom: 30px;
+.quiz-box .buttons .btn:hover{
+    background: rgb(175, 115, 200);
 }
 
-.quiz-box .questions .options-list .option .choice:hover{
-    background: rgb(175, 115, 200);
+.quiz-box .buttons .btn:last-child {
+    margin-bottom: 30px;
 }

@@ -8,6 +8,7 @@
     <title>Code Quiz</title>
 </head>
 <body>
+
     <!--top row-->
     <div class="top" id="top">
         <div class="view-hs">
@@ -16,7 +17,7 @@
 
         <div class="timer">
             <div class="time-text">Time:</div>
-            <div class="timer-sec">0</div>
+            <p id="countdown">10</p>
         </div>
     </div>
     
@@ -34,57 +35,32 @@
         <div class="start-btn" id="start-quiz"><button>Start Quiz</button></div>
     </div>
 
-    <div class="quiz-box">
-        
-        <section class="questions" id="one" style="display: none;">
-            
-            <div class="que">
-                <h1>Commonly used data types DO NOT include:</h1>
-            </div>
+    <!--quiz box-->
+    <div class="quiz-box" id="qBox" style="display: none;">
 
-            <div class="options-list" id="button-one">
+        <h1 id="question">Question</h1>
 
-                <div class="option">
-                    <button class="choice">1. strings</button>
-                </div>
-                <div class="option">
-                    <button class="choice">2. booleans</button>
-                </div>
-                <div class="option" id="correct">
-                    <button class="choice">3. alerts</button>
-                </div>
-                <div class="option">
-                    <button class="choice">4. numbers</button>
-                </div>
-            </div>
+        <div class="buttons">
+            <button class="btn" id="btn0">
+                1. <span id="choice0"></span>
+            </button>
 
-        </section>
-        
-        <section class="questions" id="two" style="display: none;">
-            
-            <div class="que">
-                <h1>The condition in an if/else statement is encloded with ______.</h1>
-            </div>
+            <button class="btn" id="btn1">
+                2. <span id="choice1"></span>
+            </button>
 
-            <div class="options-list">
+            <button class="btn" id="btn2">
+                3. <span id="choice2"></span>
+            </button>
 
-                <div class="option">
-                    <button class="choice">1. quotes</button>
-                </div>
-                <div class="option">
-                    <button class="choice">2. curly brackets</button>
-                </div>
-                <div class="option">
-                    <button class="choice">3. parenthesis</button>
-                </div>
-                <div class="option">
-                    <button class="choice">4. square brackets</button>
-                </div>
-            </div>
-
-        </section>
-
+            <button class="btn" id="btn3">
+                4. <span id="choice3"></span>
+            </button>
+        </div>
     </div>
+
+    <script src="./js/classes.js"></script>
     <script src="./js/script.js"></script>
+    
 </body>
 </html>
