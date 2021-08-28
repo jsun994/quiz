@@ -21,14 +21,17 @@ body {
 }
 
 .top .timer {
+    display: flex;
     padding-right: 10px;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    /*display: none;*/
 }
 
 .info .info-title {
@@ -38,6 +41,7 @@ body {
 .info .info-rules {
     margin-bottom: 10px;
 }
+
 .info .start-btn button {
     font-size: 15px;
     color: white;
@@ -46,3 +50,30 @@ body {
     border-radius: 5px;
 }
 
+.info .start-btn button:hover {
+    background: rgb(175, 115, 200);
+}
+
+.quiz-box .questions {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.quiz-box .questions .que {
+    margin-bottom: 10px;
+}
+
+.quiz-box .questions .options-list .option .choice {
+    text-align: left;
+    width: 150px;
+    color: white;
+    background: rebeccapurple;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.quiz-box .questions .options-list .option .choice:hover{
+    background: rgb(175, 115, 200);
+}

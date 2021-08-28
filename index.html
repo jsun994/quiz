@@ -9,18 +9,19 @@
 </head>
 <body>
     <!--top row-->
-    <div class="top">
+    <div class="top" id="top">
         <div class="view-hs">
             <p>View High Scores</p>
         </div>
 
         <div class="timer">
-            <p>Time: 0</p>
+            <div class="time-text">Time:</div>
+            <div class="timer-sec">0</div>
         </div>
     </div>
     
     <!--quiz info-->
-    <div class="info">
+    <div class="info" id="info">
         <div class="info-title">
             <h1>Coding Quiz Challenge</h1>
         </div>
@@ -30,8 +31,60 @@
             <p>Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
         </div>
 
-        <div class="start-btn"><button>Start Quiz</button></div>
+        <div class="start-btn" id="start-quiz"><button>Start Quiz</button></div>
     </div>
-    
+
+    <div class="quiz-box">
+        
+        <section class="questions" id="one" style="display: none;">
+            
+            <div class="que">
+                <h1>Commonly used data types DO NOT include:</h1>
+            </div>
+
+            <div class="options-list" id="button">
+
+                <div class="option">
+                    <button class="choice">1. strings</button>
+                </div>
+                <div class="option">
+                    <button class="choice">2. booleans</button>
+                </div>
+                <div class="option">
+                    <button class="choice">3. alerts</button>
+                </div>
+                <div class="option">
+                    <button class="choice">4. numbers</button>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="questions" id="two" style="display: none;">
+            
+            <div class="que">
+                <h1>The condition in an if/else statement is encloded with ______.</h1>
+            </div>
+
+            <div class="options-list">
+
+                <div class="option">
+                    <button class="choice">1. quotes</button>
+                </div>
+                <div class="option">
+                    <button class="choice">2. curly brackets</button>
+                </div>
+                <div class="option">
+                    <button class="choice">3. parenthesis</button>
+                </div>
+                <div class="option">
+                    <button class="choice">4. square brackets</button>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
