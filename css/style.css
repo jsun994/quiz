@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: white;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.top .view-hs {
+    color: rebeccapurple;
+    padding-left: 10px;
+}
+
+.top .timer {
+    padding-right: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.info .info-title {
+    margin-bottom: 10px;
+}
+
+.info .info-rules {
+    margin-bottom: 10px;
+}
+.info .start-btn button {
+    font-size: 15px;
+    color: white;
+    padding: 5px 10px;
+    background: rebeccapurple;
+    border-radius: 5px;
+}
+
