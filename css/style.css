@@ -88,3 +88,11 @@ body {
 .quiz-box .buttons .btn:last-child {
     margin-bottom: 30px;
 }
+
+.quiz-box .correct {
+    border-top: 1px solid;
+}
+
+.quiz-box .incorrect {
+    border-top: 1px solid;
+}

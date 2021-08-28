@@ -1,14 +1,3 @@
-/*
-var correct = document.getElementById("correct");
-
-correct.onclick = function() {
-    var qTwo = document.getElementById("two");
-    var elem = document.createElement("span");
-    elem.innerHTML = "Correct!";
-    elem.style.borderTop = "1px solid";
-    qTwo.appendChild(elem);
-}
-*/
 var questions = [
 
     new Question("Commonly used data types DO NOT include:",
@@ -43,6 +32,7 @@ function displayQuestion() {
         questionEle.innerHTML = quiz.getQueIndex().qText;
         //display choices
         var choices = quiz.getQueIndex().choices;
+        //loop thru choices
         for (var i = 0; i < choices.length; i++) {
             var choiceEle = document.getElementById("choice" + i);
             choiceEle.innerHTML = choices[i];

@@ -11,12 +11,24 @@ class Quiz {
     }
 
     guess(answer) {
+
         if ((this.getQueIndex().isCorrectAnswer(answer)) === true) {
+            
             this.score++;
             console.log(this.score);
+
+            //display correct
+            document.getElementById("correct").style.display = "";
+            document.getElementById("incorrect").style.display = "none";
+
+        } else {
+            //display incorrect
+            document.getElementById("correct").style.display = "none";
+            document.getElementById("incorrect").style.display = "";
         }
         this.qIndex++;
     }
+
     ended() {
         if (this.qIndex === this.questions.length) {
             return true;
