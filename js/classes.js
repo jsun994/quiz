@@ -1,3 +1,4 @@
+//create quiz class
 class Quiz {
 
     constructor(questions) {
@@ -22,6 +23,8 @@ class Quiz {
             document.getElementById("incorrect").style.display = "none";
 
         } else {
+            //penalize
+            time-=5;
             if (this.score > 0) {
             this.score-=5;
             }
@@ -33,7 +36,7 @@ class Quiz {
     }
 
     ended() {
-        
+
         if (this.qIndex === this.questions.length) {
             return true;
         } else {
@@ -42,6 +45,7 @@ class Quiz {
     }
 }
 
+//create question class
 class Question {
 
     constructor(qText, choices, answer) {

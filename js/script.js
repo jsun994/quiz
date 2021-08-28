@@ -1,3 +1,4 @@
+//initalize questions
 var questions = [
 
     new Question("Commonly used data types DO NOT include:",
@@ -53,10 +54,12 @@ function guess(buttonId, choice) {
 
 //show scores
 function showScores() {
+    document.getElementById("info").style.display = "none";
     document.getElementById("qBox").style.display = "none";
     document.getElementById("done").style.display = "";
     var yourScore = document.getElementById("final");
     yourScore.innerHTML = quiz.score;
+    counting.style.display = "none";
 }
 
 //initalize
@@ -65,7 +68,29 @@ var quiz = new Quiz(questions);
 //start quiz
 var start = document.getElementById("start-quiz");
 start.onclick = function() {
+    startCountdown();
     document.getElementById("info").style.display = "none";
     document.getElementById("qBox").style.display = "";
     displayQuestion();
+}
+
+//countdown
+var time = 30;
+
+var counting = document.getElementById("countdown");
+
+function startCountdown() {
+    var quizTimer = setInterval(
+        function() {
+            if (time <= 0) {
+                clearInterval(quizTimer);
+                showScores();
+                
+            } else {
+                var seconds = time;
+                time--;
+                counting.innerHTML = seconds;
+            }
+        }
+    , 1000);
 }
