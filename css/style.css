@@ -92,15 +92,34 @@ body {
 .correct {
     border-top: 1px solid;
     position: absolute;
-    top: 49%;
-    left: 29%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .incorrect {
     border-top: 1px solid;
     position: absolute;
-    top: 49%;
-    left: 29%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.done {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.done h1, p {
+    padding-bottom: 15px;
+}
+
+.done .submit {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: rebeccapurple;
+    border-radius: 5px;
 }

@@ -51,8 +51,8 @@ function guess(buttonId, choice) {
 }
 
 function showScores() {
-    window.alert("ended");
     document.getElementById("qBox").style.display = "none";
+    document.getElementById("done").style.display = "";
 }
 
 var quiz = new Quiz(questions);
