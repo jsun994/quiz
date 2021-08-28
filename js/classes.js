@@ -24,9 +24,9 @@ class Quiz {
 
         } else {
             //penalize
-            time-=5;
+            time-=10;
             if (this.score > 0) {
-            this.score-=5;
+            this.score-=10;
             }
             //display incorrect
             document.getElementById("correct").style.display = "none";
