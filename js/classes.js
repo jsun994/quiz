@@ -14,7 +14,7 @@ class Quiz {
 
         if ((this.getQueIndex().isCorrectAnswer(answer)) === true) {
             
-            this.score++;
+            this.score+=10;
             console.log(this.score);
 
             //display correct
@@ -22,6 +22,9 @@ class Quiz {
             document.getElementById("incorrect").style.display = "none";
 
         } else {
+            if (this.score > 0) {
+            this.score-=5;
+            }
             //display incorrect
             document.getElementById("correct").style.display = "none";
             document.getElementById("incorrect").style.display = "";
@@ -30,6 +33,7 @@ class Quiz {
     }
 
     ended() {
+        
         if (this.qIndex === this.questions.length) {
             return true;
         } else {

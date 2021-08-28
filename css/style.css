@@ -27,7 +27,7 @@ body {
 
 .info {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -90,17 +90,19 @@ body {
 }
 
 .correct {
+    color: darkgray;
     border-top: 1px solid;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .incorrect {
+    color: darkgray;
     border-top: 1px solid;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -122,4 +124,8 @@ body {
     color: white;
     background: rebeccapurple;
     border-radius: 5px;
+}
+
+.done .submit:hover {
+    background: rgb(175, 115, 200);
 }

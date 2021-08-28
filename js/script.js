@@ -22,6 +22,7 @@ var questions = [
     
 ];
 
+//display questions
 function displayQuestion() {
     if ((quiz.ended()) === true) {
         showScores();
@@ -50,13 +51,18 @@ function guess(buttonId, choice) {
     }
 }
 
+//show scores
 function showScores() {
     document.getElementById("qBox").style.display = "none";
     document.getElementById("done").style.display = "";
+    var yourScore = document.getElementById("final");
+    yourScore.innerHTML = quiz.score;
 }
 
+//initalize
 var quiz = new Quiz(questions);
 
+//start quiz
 var start = document.getElementById("start-quiz");
 start.onclick = function() {
     document.getElementById("info").style.display = "none";
