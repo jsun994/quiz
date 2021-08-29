@@ -4,11 +4,15 @@ var clearScores = document.getElementById("clear");
 
 console.log(highScores);
 
-highScoresList.innerHTML = highScores
-    .map(function(score) {
-        return `<li class="hs">${score.name} - ${score.score}</li>`;
-    }).join("");
+//map to highscore
+var hs = highScores.map(function(score) {
+    return `<li class="hs">${score.name} - ${score.score}</li>`;
+});
 
+//append to ul
+highScoresList.innerHTML += hs.join("");
+
+//clear click
 clearScores.onclick = function() {
     localStorage.clear();
     location.reload();
