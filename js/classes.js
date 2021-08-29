@@ -23,7 +23,7 @@ class Quiz {
             document.getElementById("incorrect").style.display = "none";
 
         } else {
-            //penalize
+            //penalize time
             time-=10;
             if (this.score > 0) {
             this.score-=10;

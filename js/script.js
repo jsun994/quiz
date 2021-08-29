@@ -32,11 +32,19 @@ function displayQuestion() {
         //display question
         var questionEle = document.getElementById("question");
         questionEle.innerHTML = quiz.getQueIndex().qText;
+        
         //display choices
         var choices = quiz.getQueIndex().choices;
+
         //loop thru choices
         for (var i = 0; i < choices.length; i++) {
             var choiceEle = document.getElementById("choice" + i);
+
+            choiceEle.onmouseover = function () {
+                document.getElementById("correct").style.display = "none";
+                document.getElementById("incorrect").style.display = "none";
+            }
+
             choiceEle.innerHTML = choices[i];
             guess("btn" + i, choices[i]);
         }
@@ -48,7 +56,9 @@ function guess(buttonId, choice) {
     var button = document.getElementById(buttonId);
     button.onclick = function() {
         quiz.guess(choice);
+        if (time > 0) {
         displayQuestion();
+        }
     }
 }
 
@@ -75,22 +85,40 @@ start.onclick = function() {
 }
 
 //countdown
-var time = 30;
+var time = 90;
 
 var counting = document.getElementById("countdown");
 
 function startCountdown() {
     var quizTimer = setInterval(
         function() {
+
             if (time <= 0) {
+
                 clearInterval(quizTimer);
                 showScores();
                 
             } else {
+
                 var seconds = time;
                 time--;
                 counting.innerHTML = seconds;
             }
         }
     , 1000);
+}
+
+//store inital and score
+var initClick = document.getElementById("initial");
+var store = document.getElementById("submit");
+
+initClick.onclick = function() {
+    document.getElementById("correct").style.display = "none";
+    document.getElementById("incorrect").style.display = "none";
+}
+
+store.onclick = function() {
+    var input = initClick.value;
+    localStorage.setItem(input, quiz.score);
+    console.log(localStorage);
 }

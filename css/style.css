@@ -15,8 +15,9 @@ body {
     padding-top: 10px;
 }
 
-.top .view-hs {
-    color: rebeccapurple;
+.top .view-hs a{
+    text-decoration: none;
+    color: rgb(175, 115, 200);
     padding-left: 10px;
 }
 
@@ -74,7 +75,7 @@ body {
 
 .quiz-box .buttons .btn {
     text-align: left;
-    width: 200px;
+    width: 180px;
     color: white;
     background: rebeccapurple;
     border-radius: 5px;
@@ -107,6 +108,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.correct p {
+    font-size: x-large;
+}
+
+.incorrect p {
+    font-size: x-large;
+}
+
 .done {
     position: absolute;
     top: 35%;
@@ -128,4 +137,19 @@ body {
 
 .done .submit:hover {
     background: rgb(175, 115, 200);
+}
+
+.highscores {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.highscores button {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: rebeccapurple;
+    border-radius: 5px;
 }
