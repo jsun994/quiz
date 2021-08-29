@@ -111,7 +111,7 @@ var store = document.getElementById("submit");
 store.disabled = true;
 
 //display purpose
-user.onclick = function() { 
+user.onmouseover = function() { 
     document.getElementById("correct").style.display = "none";
     document.getElementById("incorrect").style.display = "none";
 }
