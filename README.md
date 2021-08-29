@@ -20,3 +20,10 @@ The quiz is over if all questions answered or timer reached 0.
 When the quiz is over, user can save initals with their score.
 The user is then navigated to the high scores page.
 The user can reset high scores or go back to re-take the quiz.
+
+![ss0](./screenshots/screenshot.png)
+![ss1](./screenshots/screenshot1.png)
+![ss2](./screenshots/screenshot2.png)
+![ss3](./screenshots/screenshot3.png)
+![ss4](./screenshots/screenshot4.png)
+![ss5](./screenshots/screenshot5.png)
