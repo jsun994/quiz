@@ -64,7 +64,8 @@ function showScores() {
     var yourScore = document.getElementById("final");
     yourScore.innerHTML = quiz.score;
     finalScore = quiz.score;
-    counting.style.display = "none";
+    document.getElementById("tText").style.display = "none";
+    document.getElementById("countdown").style.display = "none";
 }
 
 //initalize

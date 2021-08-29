@@ -47,7 +47,7 @@ body {
     color: white;
     padding: 5px 10px;
     background: rebeccapurple;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .info .start-btn button:hover {
@@ -78,8 +78,11 @@ body {
     width: 180px;
     color: white;
     background: rebeccapurple;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .quiz-box .buttons .btn:hover{
@@ -130,9 +133,11 @@ body {
 .done .submit {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     color: white;
     background: rebeccapurple;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .done .submit:hover {
@@ -149,9 +154,15 @@ body {
 .highscores button {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     color: white;
     background: rebeccapurple;
-    border-radius: 5px;
+    border-radius: 8px;
+}
+
+.highscores button:hover {
+    background: rgb(175, 115, 200);
 }
 
 .hTitle {
