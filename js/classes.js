@@ -14,10 +14,8 @@ class Quiz {
     guess(answer) {
 
         if ((this.getQueIndex().isCorrectAnswer(answer)) === true) {
-            
+            //add score
             this.score+=10;
-            //console.log(this.score);
-
             //display correct
             document.getElementById("correct").style.display = "";
             document.getElementById("incorrect").style.display = "none";
@@ -25,8 +23,9 @@ class Quiz {
         } else {
             //penalize time
             time-=10;
+            //sub score
             if (this.score > 0) {
-            this.score-=5;
+            this.score-=10;
             }
             //display incorrect
             document.getElementById("correct").style.display = "none";
@@ -36,7 +35,7 @@ class Quiz {
     }
 
     ended() {
-
+        //if finished
         if (this.qIndex === this.questions.length) {
             return true;
         } else {
@@ -55,7 +54,7 @@ class Question {
     }
 
     isCorrectAnswer(choice) {
-
+        //check choice
         if (this.answer === choice) {
             return true;
         } else {

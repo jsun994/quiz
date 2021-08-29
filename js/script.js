@@ -80,10 +80,11 @@ start.onclick = function() {
 }
 
 //countdown
-var time = 90;
+var time = 45;
 
 var counting = document.getElementById("countdown");
 
+//start timer
 function startCountdown() {
     var quizTimer = setInterval(
         function() {
@@ -108,29 +109,41 @@ var user = document.getElementById("initial");
 var store = document.getElementById("submit");
 store.disabled = true;
 
-//enable button
-user.onclick = function() {
-    store.disabled = false;
+//display purpose
+user.onclick = function() { 
     document.getElementById("correct").style.display = "none";
     document.getElementById("incorrect").style.display = "none";
 }
+
+//check for input
+user.addEventListener("keyup", function() {
+    var check = user.value;
+    if (!check.match(/^[A-Za-z]+$/)) {
+        store.disabled = true;
+    } else {
+        store.disabled = false;
+    }
+});
 
 //store highscores
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(highScores);
 
 store.onclick = function() {
-    console.log("clicked the save button");
-
+    //to string quiz score
     var string = quiz.score.toString();
 
     var score = {
         score: string,
         name: user.value
     };
+    //local storage
     highScores.push(score);
-    highScores.sort((a,b) =>  b.score - a.score);
+    //sort
+    highScores.sort(function(a,b) {
+        return b.score - a.score;
+        });
+    //save to local storage
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    console.log(highScores);
     window.location.assign("highscores.html");
 }
