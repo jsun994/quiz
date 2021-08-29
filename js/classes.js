@@ -6,7 +6,7 @@ class Quiz {
         this.questions = questions;
         this.qIndex = 0;
     }
-
+    //function to get question index
     getQueIndex() {
         return this.questions[this.qIndex];
     }
@@ -25,7 +25,7 @@ class Quiz {
             time-=10;
             //sub score
             if (this.score > 0) {
-            this.score-=10;
+            this.score-=5;
             }
             //display incorrect
             document.getElementById("correct").style.display = "none";
