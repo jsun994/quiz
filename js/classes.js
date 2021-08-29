@@ -16,7 +16,7 @@ class Quiz {
         if ((this.getQueIndex().isCorrectAnswer(answer)) === true) {
             
             this.score+=10;
-            console.log(this.score);
+            //console.log(this.score);
 
             //display correct
             document.getElementById("correct").style.display = "";
@@ -26,7 +26,7 @@ class Quiz {
             //penalize time
             time-=10;
             if (this.score > 0) {
-            this.score-=10;
+            this.score-=5;
             }
             //display incorrect
             document.getElementById("correct").style.display = "none";

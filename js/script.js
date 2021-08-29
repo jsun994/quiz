@@ -39,12 +39,6 @@ function displayQuestion() {
         //loop thru choices
         for (var i = 0; i < choices.length; i++) {
             var choiceEle = document.getElementById("choice" + i);
-
-            choiceEle.onmouseover = function () {
-                document.getElementById("correct").style.display = "none";
-                document.getElementById("incorrect").style.display = "none";
-            }
-
             choiceEle.innerHTML = choices[i];
             guess("btn" + i, choices[i]);
         }
@@ -69,6 +63,7 @@ function showScores() {
     document.getElementById("done").style.display = "";
     var yourScore = document.getElementById("final");
     yourScore.innerHTML = quiz.score;
+    finalScore = quiz.score;
     counting.style.display = "none";
 }
 
@@ -109,16 +104,33 @@ function startCountdown() {
 }
 
 //store inital and score
-var initClick = document.getElementById("initial");
+var user = document.getElementById("initial");
 var store = document.getElementById("submit");
+store.disabled = true;
 
-initClick.onclick = function() {
+//enable button
+user.onclick = function() {
+    store.disabled = false;
     document.getElementById("correct").style.display = "none";
     document.getElementById("incorrect").style.display = "none";
 }
 
+//store highscores
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
+
 store.onclick = function() {
-    var input = initClick.value;
-    localStorage.setItem(input, quiz.score);
-    console.log(localStorage);
+    console.log("clicked the save button");
+
+    var string = quiz.score.toString();
+
+    var score = {
+        score: string,
+        name: user.value
+    };
+    highScores.push(score);
+    highScores.sort((a,b) =>  b.score - a.score);
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    console.log(highScores);
+    window.location.assign("highscores.html");
 }

@@ -153,3 +153,17 @@ body {
     background: rebeccapurple;
     border-radius: 5px;
 }
+
+.hTitle {
+    margin-bottom: 15px;
+}
+
+.list {
+    list-style: none;
+}
+
+.hs {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background: rgb(200, 165, 220);
+}
