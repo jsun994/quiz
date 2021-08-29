@@ -81,7 +81,7 @@ start.onclick = function() {
 }
 
 //countdown
-var time = 45;
+var time = 90;
 
 var counting = document.getElementById("countdown");
 
