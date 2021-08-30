@@ -26,5 +26,4 @@ for (var i = 0; i < highScores.length; i++) {
 clearScores.onclick = function() {
     localStorage.clear();
     location.reload();
-
 }
