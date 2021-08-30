@@ -85,8 +85,10 @@ body {
     padding-bottom: 5px;
 }
 
-.quiz-box .buttons .btn:hover{
-    background: rgb(175, 115, 200);
+@media (hover: hover) {
+    .quiz-box .buttons .btn:hover {
+        background: rgb(175, 115, 200);
+    }
 }
 
 .quiz-box .buttons .btn:last-child {
@@ -140,8 +142,10 @@ body {
     border-radius: 8px;
 }
 
-.done .submit:hover {
-    background: rgb(175, 115, 200);
+@media (hover: hover) {
+    .done .submit:hover {
+        background: rgb(175, 115, 200);
+    }
 }
 
 .highscores {
