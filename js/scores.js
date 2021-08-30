@@ -1,6 +1,6 @@
 var highScoresList = document.getElementById("highScoresList");
-var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 var clearScores = document.getElementById("clear");
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 console.log(highScores);
 

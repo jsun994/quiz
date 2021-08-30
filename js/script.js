@@ -131,15 +131,13 @@ var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(highScores);
 
 store.onclick = function() {
-    //to string quiz score
-    var string = quiz.score.toString();
-
-    var score = {
-        score: string,
+    //scores object
+    var scores = {
+        score: quiz.score,
         name: user.value
-    };
+        };
     //local storage
-    highScores.push(score);
+    highScores.push(scores);
     //sort
     highScores.sort(function(a,b) {
         return b.score - a.score;
