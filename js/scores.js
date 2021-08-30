@@ -4,16 +4,27 @@ var clearScores = document.getElementById("clear");
 
 console.log(highScores);
 
-//map to highscore
-var hs = highScores.map(function(score) {
-    return `<li class="hs">${score.name} - ${score.score}</li>`;
-});
+//creat high scores list items
+var createScore = function(hs) {
+    var listItemEl = document.createElement("li");
+    listItemEl.className = "hs";
+    listItemEl.innerHTML = (i + 1)
+    + ". "
+    + highScores[i].name
+    + " - "
+    + highScores[i].score;
+    
+    highScoresList.appendChild(listItemEl);
+}
 
-//append to ul
-highScoresList.innerHTML += hs.join("");
+//loop thru local storage
+for (var i = 0; i < highScores.length; i++) {
+    createScore(highScores[i]);
+}
 
 //clear click
 clearScores.onclick = function() {
     localStorage.clear();
     location.reload();
+
 }
