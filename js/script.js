@@ -131,6 +131,7 @@ var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(highScores);
 
 store.onclick = function() {
+    store.disabled = true;
     //scores object
     var scores = {
         score: quiz.score,
